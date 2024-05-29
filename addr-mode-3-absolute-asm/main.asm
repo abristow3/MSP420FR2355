@@ -28,7 +28,7 @@ main:
 			mov.w	&2000h, R4				; copy contents from 2000h to 2004h
 			mov.w	R4, &2004h
 
-			mov.w	&2002h, &2006h				; copy contents from 2002h to 2006h
+			mov.w	&2002h, &2006h			; copy contents from 2002h to 2006h
 
 			jmp		main					; loop main
 
@@ -40,7 +40,7 @@ main:
 			.retain							; leave this in
 
 Const1:		.short	1234h					; setup constant 1234h @2000h
-Const2:		.short	0CAFEh                	; setup constant 0CAFEh @2002h
+Const2:		.short	0CAFEh					; setup constant 0CAFEh @2002h
 
 Var1:		.space	2						; reserve 2 bytes @2004h
 Var2:		.space	2						; reserve 2 bytes @2006h
