@@ -25,12 +25,12 @@ StopWDT     mov.w   #WDTPW|WDTHOLD,&WDTCTL  ; Stop watchdog timer
 ;-------------------------------------------------------------------------------
 
 main:
-			mov.w	&2000h, R4				; copy contents from 2000h to 2004h
-			mov.w	R4, &2004h
+ mov.w &2000h, R4				; copy contents from 2000h to 2004h
+ mov.w R4, &2004h
 
-			mov.w	&2002h, &2006h			; copy contents from 2002h to 2006h
+ mov.w &2002h, &2006h			; copy contents from 2002h to 2006h
 
-			jmp		main					; loop main
+ jmp main					; loop main
 
 ;-------------------------------------------------------------------------------
 ; Memory Allocation
