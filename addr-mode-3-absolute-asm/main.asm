@@ -36,8 +36,8 @@ main:
 ; Memory Allocation
 ;-------------------------------------------------------------------------------
 
-		.data						; go to data memory address 2000h
-		.retain						; leave this in
+		.data					; go to data memory address 2000h
+		.retain					; leave this in
 
 Const1:		.short	1234h			; setup constant 1234h @2000h
 Const2:		.short	0CAFEh			; setup constant 0CAFEh @2002h
