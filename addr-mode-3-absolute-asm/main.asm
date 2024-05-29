@@ -12,7 +12,7 @@
             .text                           ; Assemble into program memory.
             .retain                         ; Override ELF conditional linking
                                             ; and retain current section.
-            .retainrefs                     ; And retain any sections that have
+            .retainrefs						; And retain any sections that have
                                             ; references to current section.
 
 ;-------------------------------------------------------------------------------
@@ -36,14 +36,14 @@ main:
 ; Memory Allocation
 ;-------------------------------------------------------------------------------
 
-		.data	   						; go to data memory address 2000h
-		.retain							; leave this in
+		.data						; go to data memory address 2000h
+		.retain						; leave this in
 
-Const1:		.short	1234h					; setup constant 1234h @2000h
-Const2:		.short	0CAFEh					; setup constant 0CAFEh @2002h
+Const1:		.short	1234h			; setup constant 1234h @2000h
+Const2:		.short	0CAFEh			; setup constant 0CAFEh @2002h
 
-Var1:		.space	2						; reserve 2 bytes @2004h
-Var2:		.space	2						; reserve 2 bytes @2006h
+Var1:		.space	2			; reserve 2 bytes @2004h
+Var2:		.space	2			; reserve 2 bytes @2006h
 
 ;-------------------------------------------------------------------------------
 ; Stack Pointer definition
